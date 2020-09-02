@@ -17,10 +17,10 @@
 #' @param outputPath A string specifying the image file to write the landscape.
 #' @return Nothing. Writes an image to file.
 getPerlin <- function(nOctaves, frequency, landSize, isWrapped, outputPath) {
-    invisible(.Call(`_proclandr_getPerlin`, nOctaves, frequency, landSize, isWrapped, outputPath))
+    invisible(.Call('_proclandr_getPerlin', PACKAGE = 'proclandr', nOctaves, frequency, landSize, isWrapped, outputPath))
 }
 
 rcpp_hello_world <- function() {
-    .Call(`_proclandr_rcpp_hello_world`)
+    .Call('_proclandr_rcpp_hello_world', PACKAGE = 'proclandr')
 }
 
