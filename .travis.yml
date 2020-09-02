@@ -19,6 +19,7 @@ addons:
       - g++-8
       - libnoise-dev # for noise
       - libnoise0
+      - cmake
 env:
   global:
   - MAKEFLAGS="-j 2"
@@ -34,6 +35,14 @@ before_install:
   - echo "CXX=g++$(VER)"       >> ~/.R/Makevars
   - echo "CXX1X=g++$(VER)"     >> ~/.R/Makevars
   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
+  - git clone git@github.com:pratikunterwegs/libnoise
+  - cd libnoise
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - make install
+
 
 # safelist
 branches:
