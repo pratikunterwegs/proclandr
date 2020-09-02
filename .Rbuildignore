@@ -1,0 +1,10 @@
+^proclandr\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^appveyor\.yml$
+^_pkgdown\.yml$
+^\.travis\.yml$
+^docs$
+^pkgdown$
+^doc$
+^Meta$

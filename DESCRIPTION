@@ -3,10 +3,15 @@ Type: Package
 Title: Wrapped Perlin Noise Landscapes in R
 Version: 1.0
 Date: 2020-09-02
-Author: Pratik Gupte
-Maintainer: Pratik Gupte <p.r.gupte@rug.nl>
+Authors@R:
+    c(person(given = "Pratik",
+           family = "Gupte",
+           role = c("aut", "cre"),
+           email = "p.r.gupte@rug.nl",
+           comment = c(ORCID = "https://orcid.org/0000-0001-5294-7819")))
 Description: Wrapped Perlin noise landscapes in R using libnoise.
-License: GPL (>= 2)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
 Imports: Rcpp (>= 1.0.4)
 LinkingTo: Rcpp
 RoxygenNote: 7.1.0
