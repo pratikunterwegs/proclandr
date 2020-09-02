@@ -5,6 +5,20 @@
 
 using namespace Rcpp;
 
+// getPerlin
+void getPerlin(const int nOctaves, const double frequency, const double landSize, const bool isWrapped, std::string outputPath);
+RcppExport SEXP _proclandr_getPerlin(SEXP nOctavesSEXP, SEXP frequencySEXP, SEXP landSizeSEXP, SEXP isWrappedSEXP, SEXP outputPathSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int >::type nOctaves(nOctavesSEXP);
+    Rcpp::traits::input_parameter< const double >::type frequency(frequencySEXP);
+    Rcpp::traits::input_parameter< const double >::type landSize(landSizeSEXP);
+    Rcpp::traits::input_parameter< const bool >::type isWrapped(isWrappedSEXP);
+    Rcpp::traits::input_parameter< std::string >::type outputPath(outputPathSEXP);
+    getPerlin(nOctaves, frequency, landSize, isWrapped, outputPath);
+    return R_NilValue;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _proclandr_rcpp_hello_world() {
@@ -17,6 +31,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_proclandr_getPerlin", (DL_FUNC) &_proclandr_getPerlin, 5},
     {"_proclandr_rcpp_hello_world", (DL_FUNC) &_proclandr_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
