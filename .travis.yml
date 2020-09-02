@@ -18,6 +18,7 @@ addons:
       - gcc-8
       - g++-8
       - libnoise-dev # for noise
+      - libnoise0
 env:
   global:
   - MAKEFLAGS="-j 2"
@@ -38,4 +39,3 @@ before_install:
 branches:
   only:
   - master
-  
