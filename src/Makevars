@@ -1,5 +1,5 @@
 CXX_STD = CXX11 # Required for C++11
 
-PKG_LIBS = $(LOCAL_LIBS) -lnoise $(RCPP_LDFLAGS)
-
 PKG_CPPFLAGS = $(LOCAL_INCLUDE) -fPIC
+
+PKG_LIBS=-fPIC -enable-shared-lib $(LOCAL_LIBS) -lnoise $(RCPP_LDFLAGS)
