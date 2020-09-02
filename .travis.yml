@@ -35,6 +35,8 @@ before_install:
   - echo "CXX=g++$(VER)"       >> ~/.R/Makevars
   - echo "CXX1X=g++$(VER)"     >> ~/.R/Makevars
   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
+  # move to home and clone and install libnoise
+  - cd
   - git clone https://github.com/pratikunterwegs/libnoise.git
   - cd libnoise
   - mkdir build
