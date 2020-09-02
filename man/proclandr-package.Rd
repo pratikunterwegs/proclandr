@@ -8,4 +8,8 @@
 \description{
 Wrapped Perlin noise landscapes in R using libnoise.
 }
+\author{
+\strong{Maintainer}: Pratik Gupte \email{p.r.gupte@rug.nl} (\href{https://orcid.org/0000-0001-5294-7819}{ORCID})
+
+}
 \keyword{internal}
