@@ -4,4 +4,4 @@ PKG_LIBS = -I /usr/local/include/noise -lnoise
 
 CXXFLAGS = -g -O3 -Wall -pipe -Wno-unused -pedantic
 
-CXXPICFLAGS = -fPIC
+PKG_CPPFLAGS = -fPIC
