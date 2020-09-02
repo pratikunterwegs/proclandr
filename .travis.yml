@@ -45,6 +45,10 @@ before_install:
   - make
   - sudo make install
 
+install:
+  # - Rscript -e 'devtools::install_deps("Package")'
+script:
+  - Rscript -e 'devtools::check()'
 
 # safelist
 branches:
