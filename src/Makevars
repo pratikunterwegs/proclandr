@@ -1,7 +1,5 @@
 CXX_STD = CXX11 # Required for C++11
 
-PKG_LIBS = -I /usr/local/include/noise -lnoise
+PKG_LIBS = $(LOCAL_LIBS) -lnoise $(RCPP_LDFLAGS)
 
-CXXFLAGS = -g -O3 -Wall -pipe -Wno-unused -pedantic
-
-PKG_CPPFLAGS = -fPIC
+PKG_CPPFLAGS = $(LOCAL_INCLUDE) -fPIC
