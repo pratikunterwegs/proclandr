@@ -9,3 +9,4 @@
 
 `proclandr` is an `R` package using `Rcpp` that makes wrapped images of Perlin noise.
 
+![Wrapped Perlin Noise](https://github.com/pratikunterwegs/proclandr/blob/master/inst/test_noise_1.png)
