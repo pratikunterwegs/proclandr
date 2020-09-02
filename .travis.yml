@@ -38,6 +38,7 @@ before_install:
   # move to home and clone and install libnoise
 
 install:
+  - chmod +x install_libnoise.sh
   - sudo ./install_libnoise.sh
 script:
   - Rscript -e 'devtools::check()'
