@@ -1,2 +1,3 @@
-# proclandr
-Wrapped Perlin noise from R.
+# Wrapped Perlin noise in R
+
+WIP
