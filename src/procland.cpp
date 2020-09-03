@@ -49,9 +49,9 @@ void getPerlin(const int nOctaves, const double frequency,
     utils::Image image;
     renderer.SetSourceNoiseMap(thisMap);
     renderer.SetDestImage(image);
-    renderer.ClearGradient ();
-    renderer.AddGradientPoint ( 0.0000, utils::Color (  0,   0,   0, 255));
-    renderer.AddGradientPoint ( 1.0000, utils::Color (255, 255, 255, 255));
+    // renderer.ClearGradient ();
+    // renderer.AddGradientPoint (-1.0000, utils::Color (  0,   0,   0, 255));
+    // renderer.AddGradientPoint ( 1.0000, utils::Color (255, 255, 255, 255));
     renderer.Render();
 
     // no colours for now
