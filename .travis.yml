@@ -20,6 +20,7 @@ addons:
       - libnoise-dev # for noise
       - libnoise0
       - cmake
+      - libmagick++-dev
 env:
   global:
   - MAKEFLAGS="-j 2"
