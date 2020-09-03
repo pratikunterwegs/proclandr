@@ -16,7 +16,7 @@ convert_images <- function(image, format = "png") {
 
     # write images
     magick::image_write(image_convert,
-                        path = stringi::stri_sub(str = "test_image.bmp", 
-                                       from = 1, to = -5))
+                        path = stringi::stri_sub(str = image, 
+                                                 from = 1, to = -5))
 
 }
