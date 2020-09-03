@@ -12,9 +12,6 @@ Authors@R:
 Description: Wrapped Perlin noise landscapes in R using libnoise.
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
-Imports: 
-    Rcpp (>= 1.0.4),
-    stringi,
-    magick
+Imports: Rcpp (>= 1.0.4)
 LinkingTo: Rcpp
 RoxygenNote: 7.1.0
