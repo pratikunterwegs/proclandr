@@ -1,3 +1,5 @@
 useDynLib(proclandr, .registration=TRUE)
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
+
+export(convert_images)
