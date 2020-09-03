@@ -38,11 +38,12 @@ before_install:
   - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
   # move to home and clone and install libnoise
   - R -q -e 'install.packages("devtools")'
+  - sudo apt-get install libmagick++-dev
+  - R -q -e 'install.packages("magick")'
 
-install: 
+# install: 
   # - chmod +x install_libnoise.sh
   # - sudo ./install_libnoise.sh
-  - sudo apt-get install libmagick++-dev
   
 script:
   - Rscript -e 'devtools::check()'
