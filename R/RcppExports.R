@@ -20,7 +20,3 @@ getPerlin <- function(nOctaves, frequency, landSize, isWrapped, outputPath) {
     invisible(.Call(`_proclandr_getPerlin`, nOctaves, frequency, landSize, isWrapped, outputPath))
 }
 
-rcpp_hello_world <- function() {
-    .Call(`_proclandr_rcpp_hello_world`)
-}
-
