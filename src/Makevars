@@ -3,4 +3,4 @@ CXXFLAGS = -fPIC
 
 PKG_CPPFLAGS = $(LOCAL_INCLUDE)
 
-PKG_LIBS=-fPIC -enable-shared-lib $(LOCAL_LIBS) -lnoise $(RCPP_LDFLAGS)
+PKG_LIBS = -fPIC -enable-shared-lib $(LOCAL_LIBS) -libnoise -lnoise $(RCPP_LDFLAGS)
