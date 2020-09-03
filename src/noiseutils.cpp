@@ -22,10 +22,10 @@
 
 #include <fstream>
 
-#include <noise/interp.h>
-#include <noise/mathconsts.h>
+#include <libnoise/interp.h>
+#include <libnoise/mathconsts.h>
 
-#include "noise/noiseutils.h"
+#include "noiseutils.h"
 
 using namespace noise;
 using namespace noise::model;

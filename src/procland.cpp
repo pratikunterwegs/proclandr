@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <noise/noise.h>
-#include <noise/noiseutils.h>
+#include <libnoise/noise.h>
+#include "noiseutils.h"
 #include <Rcpp.h>
 
 using namespace Rcpp;
