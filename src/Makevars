@@ -1,6 +1,5 @@
 CXX_STD = CXX11 # Required for C++11
-CXXFLAGS = -fPIC
 
 PKG_CPPFLAGS = $(LOCAL_INCLUDE)
 
-PKG_LIBS = --I /usr/libnoise -lnoise
+PKG_LIBS = -I /usr/libnoise -lnoise
