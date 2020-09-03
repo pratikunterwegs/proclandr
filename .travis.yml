@@ -39,9 +39,10 @@ before_install:
   # move to home and clone and install libnoise
   - R -q -e 'install.packages("devtools")'
 
-# install: 
+install: 
   # - chmod +x install_libnoise.sh
   # - sudo ./install_libnoise.sh
+  - sudo apt-get install libmagick++-dev
   
 script:
   - Rscript -e 'devtools::check()'
