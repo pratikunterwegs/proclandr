@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <libnoise/noise.h>
+#include <chrono>
 #include "noiseutils.h"
 #include <Rcpp.h>
 
@@ -28,11 +29,14 @@ void getPerlin(const int nOctaves, const double frequency,
                const double landSize, const bool isWrapped,
                std::string outputPath) {
     
+    // get seed
+    unsigned seed = static_cast<unsigned> (std::chrono::system_clock::now().time_since_epoch().count());
     // make Perlin noise
     module::Perlin noise;
     noise.SetOctaveCount(nOctaves);
     noise.SetFrequency(frequency);
     noise.SetPersistence(0.5); // hardcoded and fixed
+    noise.SetSeed(static_cast<int>(seed));
 
     // make height map
     utils::NoiseMap thisMap;
