@@ -3,20 +3,22 @@
 
 #' Prints Perlin noise to file.
 #' 
-#' @param nOctaves Number of octaves. May be thought of as small scale 
+#' @param n_octaves Number of octaves. May be thought of as small scale 
 #' variability. Must be an integer value between 1 and 8. Higher values
 #' result in landscapes with more small scale noise.
 #' @param frequency Frequency of noise. May be thought of as large scale
 #' variability. May be any double value between 1.0 and 16.0. Higher values
 #' result in noise that is closer to white noise.
-#' @param landSize Landscape size in pixels. The image saved will be a
+#' @param image_pixels Landscape size in pixels. The image saved will be a
 #' square with this side.
-#' @param isWrapped A boolean value indicating whether the landscape is
+#' @param increment The increment at which to move through the landscape.
+#' @param save_image A boolean of whether to save the image.
+#' @param wrapped A boolean value indicating whether the landscape is
 #' tiled, that is, whether the pattern repeats. Useful when generating
 #' landscapes for simulations.
-#' @param outputPath A string specifying the image file to write the landscape.
-#' @return Nothing. Writes an image to file.
-getPerlin <- function(nOctaves, frequency, landSize, isWrapped, outputPath) {
-    invisible(.Call(`_proclandr_getPerlin`, nOctaves, frequency, landSize, isWrapped, outputPath))
+#' @param output_path The image filepath to write the landscape.
+#' @return A matrix of Perlin noise. Optionally, writes an image to file.
+pln_get_noise <- function(n_octaves, frequency, increment, save_image, image_pixels, wrapped, output_path) {
+    .Call(`_proclandr_pln_get_noise`, n_octaves, frequency, increment, save_image, image_pixels, wrapped, output_path)
 }
 
