@@ -5,23 +5,26 @@
 
 using namespace Rcpp;
 
-// getPerlin
-void getPerlin(const int nOctaves, const double frequency, const double landSize, const bool isWrapped, std::string outputPath);
-RcppExport SEXP _proclandr_getPerlin(SEXP nOctavesSEXP, SEXP frequencySEXP, SEXP landSizeSEXP, SEXP isWrappedSEXP, SEXP outputPathSEXP) {
+// pln_get_noise
+Rcpp::NumericMatrix pln_get_noise(const int n_octaves, const double frequency, const double increment, const bool save_image, const double image_pixels, const bool wrapped, const std::string output_path);
+RcppExport SEXP _proclandr_pln_get_noise(SEXP n_octavesSEXP, SEXP frequencySEXP, SEXP incrementSEXP, SEXP save_imageSEXP, SEXP image_pixelsSEXP, SEXP wrappedSEXP, SEXP output_pathSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const int >::type nOctaves(nOctavesSEXP);
+    Rcpp::traits::input_parameter< const int >::type n_octaves(n_octavesSEXP);
     Rcpp::traits::input_parameter< const double >::type frequency(frequencySEXP);
-    Rcpp::traits::input_parameter< const double >::type landSize(landSizeSEXP);
-    Rcpp::traits::input_parameter< const bool >::type isWrapped(isWrappedSEXP);
-    Rcpp::traits::input_parameter< std::string >::type outputPath(outputPathSEXP);
-    getPerlin(nOctaves, frequency, landSize, isWrapped, outputPath);
-    return R_NilValue;
+    Rcpp::traits::input_parameter< const double >::type increment(incrementSEXP);
+    Rcpp::traits::input_parameter< const bool >::type save_image(save_imageSEXP);
+    Rcpp::traits::input_parameter< const double >::type image_pixels(image_pixelsSEXP);
+    Rcpp::traits::input_parameter< const bool >::type wrapped(wrappedSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type output_path(output_pathSEXP);
+    rcpp_result_gen = Rcpp::wrap(pln_get_noise(n_octaves, frequency, increment, save_image, image_pixels, wrapped, output_path));
+    return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_proclandr_getPerlin", (DL_FUNC) &_proclandr_getPerlin, 5},
+    {"_proclandr_pln_get_noise", (DL_FUNC) &_proclandr_pln_get_noise, 7},
     {NULL, NULL, 0}
 };
 
